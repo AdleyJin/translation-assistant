@@ -1,0 +1,254 @@
+:root {
+  color-scheme: light;
+  --ait-bg: #f7f8fa;
+  --ait-panel: #ffffff;
+  --ait-text: #1f2937;
+  --ait-muted: #6b7280;
+  --ait-border: #d8dde6;
+  --ait-primary: #2563eb;
+  --ait-primary-hover: #1d4ed8;
+  --ait-soft: #eef4ff;
+}
+
+.ait-popup,
+.ait-options {
+  margin: 0;
+  background: var(--ait-bg);
+  color: var(--ait-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.ait-popup {
+  width: 320px;
+}
+
+.ait-popup header {
+  align-items: center;
+  background: var(--ait-panel);
+  border-bottom: 1px solid var(--ait-border);
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 16px;
+}
+
+.ait-popup h1,
+.ait-options h1 {
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.ait-popup a {
+  color: var(--ait-primary);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.ait-icon-link {
+  align-items: center;
+  border-radius: 6px;
+  color: var(--ait-muted);
+  display: inline-flex;
+  height: 30px;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+  width: 30px;
+}
+
+.ait-icon-link:hover {
+  background: #eceff4;
+  color: var(--ait-text);
+}
+
+.ait-popup main {
+  display: grid;
+  gap: 10px;
+  padding: 14px 16px 16px;
+}
+
+.ait-options {
+  min-height: 100vh;
+}
+
+.ait-options-panel {
+  background: var(--ait-panel);
+  border: 1px solid var(--ait-border);
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: grid;
+  gap: 16px;
+  margin: 40px auto;
+  max-width: 560px;
+  padding: 24px;
+  position: relative;
+}
+
+.ait-field {
+  display: grid;
+  gap: 6px;
+}
+
+.ait-field span {
+  color: var(--ait-muted);
+  font-size: 13px;
+}
+
+.ait-field input,
+.ait-field select {
+  border: 1px solid var(--ait-border);
+  border-radius: 6px;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: var(--ait-text);
+  font: inherit;
+  min-height: 38px;
+  padding: 8px 10px;
+  width: 100%;
+}
+
+.ait-field input:focus,
+.ait-field select:focus {
+  border-color: var(--ait-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+  outline: none;
+}
+
+button {
+  background: var(--ait-primary);
+  border: 1px solid var(--ait-primary);
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  min-height: 38px;
+  padding: 8px 12px;
+}
+
+button:hover {
+  background: var(--ait-primary-hover);
+  border-color: var(--ait-primary-hover);
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.62;
+}
+
+button.secondary {
+  background: #ffffff;
+  color: var(--ait-primary);
+}
+
+button.secondary:hover {
+  background: var(--ait-soft);
+}
+
+button.ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--ait-muted);
+}
+
+button.ghost:hover {
+  background: #eceff4;
+  color: var(--ait-text);
+}
+
+button.ait-close-button {
+  align-items: center;
+  background: transparent;
+  border-color: transparent;
+  border-radius: 6px;
+  color: var(--ait-muted);
+  display: inline-flex;
+  font-size: 18px;
+  font-weight: 400;
+  height: 32px;
+  justify-content: center;
+  min-height: 32px;
+  padding: 0;
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 32px;
+}
+
+button.ait-close-button:hover {
+  background: #eceff4;
+  border-color: transparent;
+  color: var(--ait-text);
+}
+
+.ait-status {
+  color: var(--ait-muted);
+  font-size: 13px;
+  line-height: 1.45;
+  min-height: 19px;
+}
+
+/* Toggle switch */
+.ait-toggle-field {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.ait-toggle-field > span {
+  flex-shrink: 0;
+}
+
+.ait-toggle {
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 8px;
+  user-select: none;
+}
+
+.ait-toggle input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+
+.ait-toggle-track {
+  background: #d1d5db;
+  border-radius: 999px;
+  display: inline-block;
+  flex-shrink: 0;
+  height: 22px;
+  position: relative;
+  transition: background 0.2s;
+  width: 40px;
+}
+
+.ait-toggle input:checked ~ .ait-toggle-track {
+  background: var(--ait-primary);
+}
+
+.ait-toggle-thumb {
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  height: 18px;
+  left: 2px;
+  position: absolute;
+  top: 2px;
+  transition: transform 0.2s;
+  width: 18px;
+}
+
+.ait-toggle input:checked ~ .ait-toggle-track .ait-toggle-thumb {
+  transform: translateX(18px);
+}
+
+.ait-toggle-label {
+  color: var(--ait-muted);
+  font-size: 13px;
+  min-width: 2em;
+}
