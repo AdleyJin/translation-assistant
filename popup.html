@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Article Translator</title>
+    <link rel="stylesheet" href="ui.css">
+  </head>
+  <body class="ait-popup">
+    <header>
+      <h1>AI Translator</h1>
+      <a href="options.html" target="_blank" rel="noreferrer" class="ait-icon-link" title="设置" aria-label="打开设置">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </a>
+    </header>
+
+    <main>
+      <label class="ait-field">
+        <span>目标语言</span>
+        <input id="targetLanguage" type="text" placeholder="中文">
+      </label>
+
+      <label class="ait-field">
+        <span>英语水平</span>
+        <select id="englishLevel">
+          <option value="cet4">大学英语四级 (CET-4)</option>
+          <option value="cet6">大学英语六级 (CET-6)</option>
+          <option value="tem4">英语专业四级 (TEM-4)</option>
+          <option value="tem8">英语专业八级 (TEM-8)</option>
+          <option value="kaoyan">考研英语</option>
+          <option value="ielts">雅思 (IELTS)</option>
+          <option value="toefl">托福 (TOEFL)</option>
+          <option value="gre">GRE</option>
+        </select>
+      </label>
+
+      <div class="ait-field ait-toggle-field">
+        <span>自动划线</span>
+        <label class="ait-toggle" title="开启后进入页面自动扫描并标注重点单词">
+          <input id="autoHighlight" type="checkbox">
+          <span class="ait-toggle-track">
+            <span class="ait-toggle-thumb"></span>
+          </span>
+          <span class="ait-toggle-label" id="autoHighlightLabel">开启</span>
+        </label>
+      </div>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

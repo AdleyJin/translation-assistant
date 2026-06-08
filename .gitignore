@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Cursor IDE
+.cursor/
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
